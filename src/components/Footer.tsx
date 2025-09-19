@@ -76,9 +76,9 @@ const Footer = () => {
                 <div className="flex flex-col gap-5 lg:gap-7">
                     <CustomeText title="Navigation" className="text-lg font-semibold text-white" />
                     <div className="flex flex-col gap-3 lg:gap-5">
-                                className="w-8 h-8 rounded-full flex hover:scale-110 transition-transform bg-gray-800 hover:bg-gray-700 items-center justify-center"
-                            <Link href={`#${key.toLowerCase()}`} key={idx} className="text-white text-sm cursor-pointer hover:text-gray-300 transition-colors">
-                                <Icon size={16} className="text-white" />
+                        {navigation.map((item, idx) => (
+                            <Link href={`#${item.toLowerCase()}`} key={idx} className="text-white text-sm cursor-pointer hover:text-gray-300 transition-colors">
+                                {item}
                             </Link>
                         ))}
                     </div>
